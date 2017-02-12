@@ -5,6 +5,7 @@ ul.tabs {
     margin: 2em 0;
     padding: 0 0.5em;
     display: flexbox; /* ie 10/11 */
+    flex-line-pack: justify; /* ie 10 */
     display: flex;
     justify-content: center;
 }
