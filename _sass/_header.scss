@@ -1,0 +1,21 @@
+body > header {
+    text-align: center;
+    background: #5DBEF0;
+    padding-bottom: 1px;
+    
+    background: radial-gradient(ellipse at center, rgba(93,190,240,1) 0%,rgba(93,190,240,0.6) 50%,rgba(93,190,240,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+
+}
+.bio-tile {
+    width: 100%;
+    max-width: 400px;
+    @media only screen  
+      and (max-device-width: 480px)
+      and (orientation: portrait) {
+        max-width: 200px;
+    }
+}
+h1 {
+    margin-top: -1em;
+}
