@@ -1,11 +1,12 @@
 ul.tabs {
-    @include clearfix;
     text-align: center;
     border-bottom: 2px solid #5DBEF0;
     margin: 2em 0;
     padding: 0 0.5em;
-    display: flexbox; /* ie 10/11 */
-    flex-line-pack: justify; /* ie 10 */
+     /* ie 10 */
+    display: -ms-flexbox;
+    -ms-flex-pack: center;
+    /* everything else */
     display: flex;
     justify-content: center;
 }
@@ -13,10 +14,20 @@ ul.tabs li {
     display: block;
     width: 50%;
     text-align: center;
-    float: left;
     background-image: none;
     padding: 0;
     margin: 0;
+}
+/* for ie 9 */
+.no-flexbox {
+    ul.tabs {
+        @include clearfix;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    ul.tabs li {
+        float: left;
+    }
 }
 ul.tabs li a {
     display: block;
