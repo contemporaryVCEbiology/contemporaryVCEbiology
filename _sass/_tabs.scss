@@ -1,5 +1,6 @@
 ul.tabs {
     @include clearfix;
+    text-align: center;
     border-bottom: 2px solid #5DBEF0;
     margin: 2em 0;
     padding: 0 0.5em;
