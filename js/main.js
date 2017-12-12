@@ -25,7 +25,7 @@ $(document).ready(function(){
                 })
             }
     );*/
-    console.log(document.referrer);
+    console.log(document.url);
     getVids(playlistId);
     function getVids(playlistId){
         $.get(
