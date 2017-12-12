@@ -31,7 +31,8 @@ $(document).ready(function(){
             'https://www.googleapis.com/youtube/v3/playlistItems', {
                 part: 'snippet',
                 playlistId: playlistId,
-                key: apiKey },
+                key: apiKey,
+                maxResults: 50 },
                 function(data){
                     var output;
                     $.each(data.items, function(){
