@@ -35,7 +35,7 @@ $(document).ready(function(){
                 maxResults: 50 },
                 function(data){
                     var output;
-                    $.each(data.items, function(){
+                    $.each(data.items, function(i, item){
                         console.log(item);
                         /*
                         videoTitle = item.snippet.title;
