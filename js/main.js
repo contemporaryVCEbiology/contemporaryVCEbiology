@@ -25,7 +25,7 @@ $(document).ready(function(){
                 })
             }
     );*/
-    console.log(document.documentURI);
+
     getVids(playlistId);
     function getVids(playlistId){
         $.get(
@@ -39,10 +39,10 @@ $(document).ready(function(){
                     $.each(data.items, function(i, item){
                         console.log(item);
                         
-                        videoTitle = item.snippet.title;
+                        /*videoTitle = item.snippet.title;
                         
                         output = '<li>'+videoTitle+'</li>';
-                        $('#results').append(output);
+                        $('#results').append(output);*/
                         
                     })
                 }
