@@ -42,6 +42,7 @@ $(document).ready(function(){
                         videoTitle = item.snippet.title;
                         
                         output = '<li>'+videoTitle+'</li>';
+                        console.log(output);
                         $('#results').append(output);
                         
                     })
