@@ -40,8 +40,10 @@ $(document).ready(function(){
                         console.log(item);
                         
                         videoTitle = item.snippet.title;
+                        videoDescription = item.snippet.description;
+                        videoThumbnail = item.snippet.thumbnails.medium.url;
                         
-                        output = '<li>'+videoTitle+'</li>';
+                        output = '<li><img src="'+item.snippet.thumbnails.medium.url+'" alt=""><div class="videoDetails"><span class="videoTitle">'+videoTitle+'</span> item.snippet.description;</li>';
                         console.log(output);
                         $('#results').append(output);
                         
