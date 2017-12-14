@@ -3,6 +3,8 @@
     padding: 0;
     @media only screen and (min-width: 20em) {
         @include clearfix;
+        display: flex;
+        flex-wrap: wrap;
         li {
             width: 50%;
             float: left;
