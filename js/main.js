@@ -43,7 +43,7 @@ $(document).ready(function(){
                         videoDescription = item.snippet.description;
                         videoThumbnail = item.snippet.thumbnails.medium.url;
                         
-                        output = '<li><img src="'+item.snippet.thumbnails.medium.url+'" alt=""><div class="videoDetails"><span class="videoTitle">'+videoTitle+'</span> item.snippet.description;</li>';
+                        output = '<li><img src="'+item.snippet.thumbnails.medium.url+'" alt=""><div class="videoDetails"><span class="videoTitle">'+videoTitle+'</span>'+ videoThumbnail+'</li>';
                         console.log(output);
                         $('#results').append(output);
                         
