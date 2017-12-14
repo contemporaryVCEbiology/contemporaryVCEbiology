@@ -42,8 +42,9 @@ $(document).ready(function(){
                         videoTitle = item.snippet.title;
                         videoDescription = item.snippet.description;
                         videoThumbnail = item.snippet.thumbnails.medium.url;
+                        videoId = item.snippet.resourceId.videoId;
                         
-                        output = '<li><img src="'+item.snippet.thumbnails.medium.url+'" alt=""><div class="videoDetails"><span class="videoTitle">'+videoTitle+'</span>'+ videoDescription+'</li>';
+                        output = '<li><a href="https://youtu.be/'+videoId+'"><img src="'+item.snippet.thumbnails.medium.url+'" alt=""><div class="videoDetails"><span class="videoTitle">'+videoTitle+'</span>'+ videoDescription+'</a></li>';
                         console.log(output);
                         $('#results').append(output);
                         
