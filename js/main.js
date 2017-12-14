@@ -13,20 +13,8 @@ $(document).ready(function(){
             $('#'+tabId).addClass('current');
         }
     });
-    
-    /*$.get(
-        'https://www.googleapis.com/youtube/v3/channels', {
-            part: 'contentDetails',
-            id: channelId,
-            key: apiKey },
-            function(data){
-                $.each(data.items, function(){
-                    console.log(item);
-                })
-            }
-    );*/
 
-    getVids(playlistId);
+    //getVids(playlistId);
     function getVids(playlistId){
         $.get(
             'https://www.googleapis.com/youtube/v3/playlistItems', {
