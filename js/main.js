@@ -1,6 +1,6 @@
 var channelId = 'UCtHT4kaRYc0XFXsaxpmDPIg';
 var apiKey = 'AIzaSyAOqpwlI1CYmOBLBVT02GF4VES65IelHko';
-var playlistId = 'PLkY7Yb9m1O2VDBLp6j76W5kzazTMeOPqO';
+var playlistId = 'PLkY7Yb9m1O2XBi22AcXujjAltwMXN-Qrf';
 
 $(document).ready(function(){
     $('.tabs a').click(function(event){
@@ -14,7 +14,7 @@ $(document).ready(function(){
         }
     });
 
-    /*getVids(playlistId);
+    getVids(playlistId);
     function getVids(playlistId){
         $.get(
             'https://www.googleapis.com/youtube/v3/playlistItems', {
@@ -39,5 +39,5 @@ $(document).ready(function(){
                     })
                 }
         );
-    }*/
+    }
 });
