@@ -2,15 +2,16 @@
     list-style: none;
     padding: 0;
     li {
+        position: relative;
         height: 300px;
         overflow: hidden;
         margin-bottom: 20px;
         a {
             position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
+            top: 10px;
+            right: 10px;
+            bottom: 10px;
+            left: 10px;
             &:hover {
                 box-shadow: 0 0 10px #63779c;
                 cursor: pointer;
