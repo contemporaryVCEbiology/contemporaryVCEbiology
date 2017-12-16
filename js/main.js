@@ -14,7 +14,7 @@ $(document).ready(function(){
         }
     });
 
-    getVids(playlistId);
+    /*getVids(playlistId);
     function getVids(playlistId){
         $.get(
             'https://www.googleapis.com/youtube/v3/playlistItems', {
@@ -39,5 +39,5 @@ $(document).ready(function(){
                     })
                 }
         );
-    }
+    }*/
 });
