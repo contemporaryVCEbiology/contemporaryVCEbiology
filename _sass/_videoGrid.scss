@@ -30,7 +30,8 @@
             }
         }
     }
-    @media only screen and (min-width: 20em) {
+    /* 321px up */
+    @media only screen and (min-width: 20.0625em) {
         @include clearfix;
         display: flex;
         flex-wrap: wrap;
@@ -43,6 +44,7 @@
             }
         }
     }
+    /* 600px up */
     @media only screen and (min-width: 37.5em) {
         li {
             width: 25%;
