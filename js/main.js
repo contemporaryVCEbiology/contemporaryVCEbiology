@@ -32,12 +32,22 @@ $(document).ready(function(){
                         videoThumbnail = item.snippet.thumbnails.medium.url;
                         videoId = item.snippet.resourceId.videoId;
                         
-                        output = '<li><a href="https://youtu.be/'+videoId+'"><img src="'+item.snippet.thumbnails.medium.url+'" alt=""><span class="videoTitle">'+videoTitle+'</span>'+ videoDescription+'</a></li>';
+                        output = '<li><a href="https://youtu.be/'+videoId+'" target="_blank" data-videoId="'+videoId+'"><img src="'+item.snippet.thumbnails.medium.url+'" alt=""><span class="videoTitle">'+videoTitle+'</span>'+ videoDescription+'</a></li>';
                         console.log(output);
                         $('#results').append(output);
                         
                     })
                 }
         );
+    }
+    
+    $('#results a').click(function(event){
+        event.preventDefault();
+        videoId = $(this).attr('data-videoId');
+        $('.overlay').append('<div class="videoWrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/'+videoId+'" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></div>').addClass('on');
+        
+    });
+    $('.overlay').click(function(event){
+        $(this).empty().removeClass('on');
     }
 });
