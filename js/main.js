@@ -49,5 +49,5 @@ $(document).ready(function(){
     });
     $('.overlay').click(function(event){
         $(this).empty().removeClass('on');
-    }
+    });
 });
