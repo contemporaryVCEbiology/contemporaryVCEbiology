@@ -48,10 +48,8 @@ $(document).ready(function(){
     });*/
     
     
-    
-    Barba.Pjax.start();
     Multimedia.init();
-    
+    Barba.Pjax.start();
     
     
     $('#results').on( 'click', 'li a', function() {
