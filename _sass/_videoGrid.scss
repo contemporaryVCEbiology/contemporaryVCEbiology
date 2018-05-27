@@ -35,8 +35,6 @@
     /* 321px up */
     @media only screen and (min-width: 20.0625em) {
         @include clearfix;
-        display: flex;
-        flex-wrap: wrap;
         li {
             width: 50%;
             float: left;
@@ -44,6 +42,15 @@
             .videoTitle {
                 display: block;
                 font-weight: bold;
+            }
+        }
+        @supports (display: flex) {
+            display: flex;
+            flex-wrap: wrap;
+            /* remove clearfix */
+            &:before,
+            &:after {
+                display: none;
             }
         }
     }
