@@ -27,7 +27,7 @@ function getVids(playlistId){
                     videoThumbnail = item.snippet.thumbnails.medium.url;
                     videoId = item.snippet.resourceId.videoId;
 
-                    output = '<li><a href="https://youtu.be/'+videoId+'" target="_blank" data-videoId="'+videoId+'"><img src="'+item.snippet.thumbnails.medium.url+'" alt=""><span class="videoTitle">'+videoTitle+'</span>'+ videoDescription+'</a></li>';
+                    output = '<li><a class="no-barba" href="https://youtu.be/'+videoId+'" target="_blank" data-videoId="'+videoId+'"><img src="'+item.snippet.thumbnails.medium.url+'" alt=""><span class="videoTitle">'+videoTitle+'</span>'+ videoDescription+'</a></li>';
                     console.log(output);
                     $('#results').append(output);
 
