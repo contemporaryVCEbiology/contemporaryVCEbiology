@@ -1,0 +1,31 @@
+/* clearfix */
+.col-2max:before,
+.col-2max:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+.col-2max:after {
+    clear: both;
+}
+.col-2max > * {
+    margin-bottom: 0;
+}
+@media only screen and (min-width: 40.0625em) {
+    .col-2max > * {
+        float: left;
+        display: block;
+        margin-right: 3.5786636068%;
+        width: 48.2106681966%;
+    }
+    .col-2max > *:last-child {
+        margin-right: 0;
+    }
+    .col-2max > *:nth-child(2n) {
+        margin-right: 0;
+    }
+    .col-2max > *:nth-child(2n+1) {
+        clear: left;
+    }
+}
