@@ -35,8 +35,8 @@
             width: 100%;
         }
     }
-    /* 321px up */
-    @media only screen and (min-width: 20.0625em) {
+    /* 641px up */
+    @media only screen and (min-width: 40.0625em) {
         @include clearfix;
         li {
             width: 50%;
@@ -58,12 +58,6 @@
             }
         }
     }
-    /* 600px up 
-    @media only screen and (min-width: 37.5em) {
-        li {
-            width: 25%;
-        }
-    }*/
 }
 
 .overlay.on {
