@@ -45,6 +45,7 @@
             .videoTitle {
                 display: block;
                 font-weight: bold;
+                margin: 0.5em 0;
             }
         }
         @supports (display: flex) {
