@@ -2,9 +2,10 @@
     list-style: none;
     padding: 0;
     li {
+        display: block;
         position: relative;
-        height: 300px;
-        overflow: hidden;
+        //height: 300px;
+        //overflow: hidden;
         margin-bottom: 20px;
         a {
             position: absolute;
