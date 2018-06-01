@@ -17,7 +17,9 @@ function getVids(playlistId){
             playlistId: playlistId,
             key: apiKey,
             maxResults: 50 },
-            displayVids(data)
+            function( data ) {
+                displayVids(data)
+            }
     );
 }
 function displayVids(data){
