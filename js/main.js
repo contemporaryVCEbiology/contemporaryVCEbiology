@@ -1,13 +1,18 @@
-var channelId = 'UCtHT4kaRYc0XFXsaxpmDPIg';
+//var channelId = 'UCtHT4kaRYc0XFXsaxpmDPIg';
 var apiKey = 'AIzaSyAOqpwlI1CYmOBLBVT02GF4VES65IelHko';
 var playlistId = 'PLkY7Yb9m1O2XBi22AcXujjAltwMXN-Qrf';
 
 var Multimedia = Barba.BaseView.extend({
-  namespace: 'multimedia',
-  onEnterCompleted: function() {
-      getVids(playlistId);
-      vidLinks();
-  }
+    namespace: 'multimedia',
+    onEnterCompleted: function() {
+        var localData = JSON.parse(window.localStorage.getItem('playlistitems');
+        if($.isEmptyObject(localData)){
+            getVids(playlistId);
+        } else {
+            displayVids(localdata);
+        }
+        vidLinks();
+    }
 });
 
 function getVids(playlistId){
@@ -18,7 +23,9 @@ function getVids(playlistId){
             key: apiKey,
             maxResults: 50 },
             function( data ) {
-                displayVids(data)
+                displayVids(data);
+                var localData = JSON.stringify(data);
+                window.localStorage.setItem('playlistitems', localData);
             }
     );
 }
