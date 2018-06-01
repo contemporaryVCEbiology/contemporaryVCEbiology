@@ -17,23 +17,23 @@ function getVids(playlistId){
             playlistId: playlistId,
             key: apiKey,
             maxResults: 50 },
-            function(data){
-                var output;
-                $.each(data.items, function(i, item){
-                    console.log(item);
-
-                    videoTitle = item.snippet.title;
-                    videoDescription = item.snippet.description;
-                    videoThumbnail = item.snippet.thumbnails.medium.url;
-                    videoId = item.snippet.resourceId.videoId;
-
-                    output = '<li><a class="no-barba" href="https://youtu.be/'+videoId+'" target="_blank" data-videoId="'+videoId+'"><img src="'+item.snippet.thumbnails.medium.url+'" alt=""><span class="videoTitle">'+videoTitle+'</span>'+ videoDescription+'</a></li>';
-                    console.log(output);
-                    $('#results').append(output);
-
-                })
-            }
+            displayVids(data)
     );
+}
+function displayVids(data){
+    var output;
+    $.each(data.items, function(i, item){
+        console.log(item);
+
+        videoTitle = item.snippet.title;
+        videoDescription = item.snippet.description;
+        videoThumbnail = item.snippet.thumbnails.medium.url;
+        videoId = item.snippet.resourceId.videoId;
+
+        output = '<li><a class="no-barba" href="https://youtu.be/'+videoId+'" target="_blank" data-videoId="'+videoId+'"><img src="'+item.snippet.thumbnails.medium.url+'" alt=""><span class="videoTitle">'+videoTitle+'</span>'+ videoDescription+'</a></li>';
+        console.log(output);
+        $('#results').append(output);
+    })
 }
 function vidLinks(){
     $('#results').on( 'click', 'li a', function() {
@@ -47,21 +47,6 @@ function vidLinks(){
 }
 
 $(document).ready(function(){
-    /*$('.tabs a').click(function(event){
-        event.preventDefault();
-        if(!$(this).hasClass('current')){
-            var tabId = $(this).attr('href').substr(1);
-            $('.tabs a').removeClass('current');
-            $('.tab').removeClass('current');
-            $(this).addClass('current');
-            $('#'+tabId).addClass('current');
-        }
-    });*/
-    
-    
     Multimedia.init();
     Barba.Pjax.start();
-    
-    
-    
 });
