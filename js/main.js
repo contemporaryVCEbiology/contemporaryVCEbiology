@@ -5,7 +5,7 @@ var playlistId = 'PLkY7Yb9m1O2XBi22AcXujjAltwMXN-Qrf';
 var Multimedia = Barba.BaseView.extend({
     namespace: 'multimedia',
     onEnterCompleted: function() {
-        var localData = JSON.parse(window.localStorage.getItem('playlistitems');
+        var localData = JSON.parse(window.localStorage.getItem('playlistitems'));
         if($.isEmptyObject(localData)){
             getVids(playlistId);
         } else {
