@@ -32,7 +32,7 @@ function getVids(playlistId){
 function displayVids(data){
     var output;
     $.each(data.items, function(i, item){
-        console.log(item);
+        //console.log(item);
 
         videoTitle = item.snippet.title;
         videoDescription = item.snippet.description;
@@ -40,7 +40,7 @@ function displayVids(data){
         videoId = item.snippet.resourceId.videoId;
 
         output = '<li><a class="no-barba" href="https://youtu.be/'+videoId+'" target="_blank" data-videoId="'+videoId+'"><img src="'+item.snippet.thumbnails.medium.url+'" alt=""><span class="videoTitle">'+videoTitle+'</span>'+ videoDescription+'</a></li>';
-        console.log(output);
+        //console.log(output);
         $('#results').append(output);
     })
 }
@@ -48,7 +48,7 @@ function vidLinks(){
     $('#results').on( 'click', 'li a', function() {
         event.preventDefault();
         videoId = $(this).attr('data-videoId');
-        $('.overlay').append('<div class="videoWrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/'+videoId+'" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></div>').addClass('on');
+        $('.overlay').append('<div class="videoWrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/'+videoId+'" frameborder="0" allow="autoplay" allow="encrypted-media" allowfullscreen></iframe></div>').addClass('on');
     });
     $('.overlay').click(function(event){
         $(this).empty().removeClass('on');
