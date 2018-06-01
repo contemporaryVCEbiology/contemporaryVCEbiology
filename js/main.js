@@ -9,7 +9,7 @@ var Multimedia = Barba.BaseView.extend({
         if($.isEmptyObject(localData)){
             getVids(playlistId);
         } else {
-            displayVids(localdata);
+            displayVids(localData);
         }
         vidLinks();
     }
