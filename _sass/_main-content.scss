@@ -2,7 +2,6 @@ img {
     max-width: 100%;
 }
 .container {
-    padding: 1em 0;
     max-width: 900px;
     margin: 0 auto;
 }
@@ -18,7 +17,7 @@ img {
     }
 }
 .barba-container .container {
-    padding: 0 1em;
+    padding: 0 1em 1em 1em;
 }
 article {
     position: relative;
