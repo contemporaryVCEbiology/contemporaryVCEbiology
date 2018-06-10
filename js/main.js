@@ -48,7 +48,7 @@ function vidLinks(){
     $('#results').on( 'click', 'li a', function() {
         event.preventDefault();
         videoId = $(this).attr('data-videoId');
-        $('.overlay').append('<div class="videoWrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/'+videoId+'" frameborder="0" allow="autoplay" allow="encrypted-media" allowfullscreen></iframe></div>').addClass('on');
+        $('.overlay').append('<div class="videoWrapper"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/'+videoId+'&amp;rel=0" frameborder="0" allow="autoplay" allow="encrypted-media" allowfullscreen></iframe></div>').addClass('on');
     });
     $('.overlay').click(function(event){
         $(this).empty().removeClass('on');
